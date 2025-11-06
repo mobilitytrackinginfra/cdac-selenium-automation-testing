@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Lab9WebElement {
+public class ALab9WebElement {
 
 	public static void main(String[] args) throws InterruptedException {
 		

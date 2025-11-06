@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 
-public class Lab5Logs {
+public class ALab5Logs {
 
 	public static void main(String[] args) throws InterruptedException {
 		

@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Lab8Locators {
+public class ALab8Locators {
 
 	public static void main(String[] args) throws InterruptedException {
 		

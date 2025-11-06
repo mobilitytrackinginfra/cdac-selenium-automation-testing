@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Lab11FindElements {
+public class BLab11FindElements {
 
 	public static void main(String[] args) throws InterruptedException {
 		

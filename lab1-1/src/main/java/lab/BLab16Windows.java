@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Lab16Windows {
+public class BLab16Windows {
 
 	public static void main(String[] args) throws InterruptedException {
 		
