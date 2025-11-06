@@ -1,0 +1,29 @@
+https://drive.google.com/drive/folders/17coNJRzpetD1v6Rwi2ocAbnRnteJqalQ?usp=sharing
+
+
+Database Creation
+
+database name - espocrm
+collation - utf8_general_ci
+
+Database User
+username espocrm
+password espocrm
+
+Check File Permissions
+
+Edit PHP Configration
+C:\xampp\php\php.ini
+Uncomment extensions zip, gd
+max_execution_time=180
+
+Create Task Scheduler
+Name EspoCRM Cron
+Trigger: Daily
+Action: Start a program → Select cron.bat file
+Finish
+
+Right Click
+Triggers tab -> Edit
+Repeat task every 1 minute
+Stop all running tasks
