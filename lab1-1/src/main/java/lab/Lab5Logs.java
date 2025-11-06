@@ -13,7 +13,7 @@ public class Lab5Logs {
 	public static void main(String[] args) throws InterruptedException {
 		
 		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("http://localhost/suitecrm/public/");
+		driver.navigate().to("http://localhost/crm");
 
 		Set<String> logTypes = driver.manage().logs().getAvailableLogTypes();
 		System.out.println(logTypes);

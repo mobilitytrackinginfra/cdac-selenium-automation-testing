@@ -12,7 +12,7 @@ public class Lab3Navigate {
 	public static void main(String[] args) throws InterruptedException {
 		
 		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("http://localhost/suitecrm/public/");
+		driver.navigate().to("http://localhost/crm");
 		Thread.sleep(Duration.ofSeconds(5));
 
 		driver.manage().window().fullscreen();

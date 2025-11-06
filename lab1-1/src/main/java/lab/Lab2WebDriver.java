@@ -10,7 +10,7 @@ public class Lab2WebDriver {
 	public static void main(String[] args) throws InterruptedException {
 		
 		WebDriver driver = new ChromeDriver();
-		driver.get("http://localhost/suitecrm/public/");
+		driver.get("http://localhost/crm");
 
 		String url = driver.getCurrentUrl();
 		System.out.println("Current URL "+url);

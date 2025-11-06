@@ -27,3 +27,4 @@ public class Lab1Browsers {
 		driver.quit();
 	}
 }
+
