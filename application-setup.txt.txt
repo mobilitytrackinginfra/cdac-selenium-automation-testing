@@ -1,3 +1,4 @@
+https://www.apachefriends.org/download.html
 https://drive.google.com/drive/folders/17coNJRzpetD1v6Rwi2ocAbnRnteJqalQ?usp=sharing
 
 
@@ -7,23 +8,13 @@ database name - espocrm
 collation - utf8_general_ci
 
 Database User
-username espocrm
-password espocrm
+username espocrm_user
+password espocrm_password
 
 Check File Permissions
 
 Edit PHP Configration
 C:\xampp\php\php.ini
-Uncomment extensions zip, gd
+Uncomment extensions zip, gd, soap, intl
 max_execution_time=180
-
-Create Task Scheduler
-Name EspoCRM Cron
-Trigger: Daily
-Action: Start a program → Select cron.bat file
-Finish
-
-Right Click
-Triggers tab -> Edit
-Repeat task every 1 minute
-Stop all running tasks
+max_input_time=180

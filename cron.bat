@@ -1,1 +1,1 @@
-C:\xampp\php\php.exe -f C:\xampp\htdocs\crm\cron.php
+C:\xampp\php\\php.EXE -f C:\xampp\htdocs\crm\cron.php
