@@ -16,11 +16,11 @@ public class ALab1Browsers {
 		
 		Thread.sleep(Duration.ofSeconds(3));
 
-		driver = new FirefoxDriver();
-		Thread.sleep(Duration.ofSeconds(5));
-		driver.quit();
-		
-		Thread.sleep(Duration.ofSeconds(3));
+//		driver = new FirefoxDriver();
+//		Thread.sleep(Duration.ofSeconds(5));
+//		driver.quit();
+//		
+//		Thread.sleep(Duration.ofSeconds(3));
 
 		driver = new EdgeDriver();
 		Thread.sleep(Duration.ofSeconds(5));

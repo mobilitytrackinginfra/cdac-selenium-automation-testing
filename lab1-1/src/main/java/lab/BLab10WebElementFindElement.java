@@ -1,7 +1,6 @@
 package lab;
 
 import java.time.Duration;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,15 +13,18 @@ public class BLab10WebElementFindElement {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("http://www.google.com");
+		driver.get("http://localhost/crm");
 		Thread.sleep(Duration.ofSeconds(2));
 		
-		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
-		System.out.println(allLinks.size());
+		driver.findElement(By.id("field-userName")).sendKeys("admin");
+		driver.findElement(By.name("password")).sendKeys("admin@CRM");
+		driver.findElement(By.tagName("button")).click();
+		Thread.sleep(Duration.ofSeconds(5));
 		
-		for(WebElement a : allLinks) {
-			System.out.println(a.getText()+", "+a.getAttribute("href"));
-		}
+		WebElement header = driver.findElement(By.className("navbar-header"));
+		WebElement logo = header.findElement(By.className("navbar-logo-container"));
+		WebElement link =  logo.findElement(By.tagName("a"));
+		link.click();
 		Thread.sleep(Duration.ofSeconds(5));
 		driver.quit();
 

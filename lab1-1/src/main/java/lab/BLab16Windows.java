@@ -39,7 +39,7 @@ public class BLab16Windows {
 		driver.close();
 		
 		Thread.sleep(Duration.ofSeconds(2));
-		driver.switchTo().window(originalWindow);
+		driver.switchTo().window(originalWindow); //Mandatory (Exception - no such window: target window already closed)
 		driver.switchTo().newWindow(WindowType.TAB);
 		Thread.sleep(Duration.ofSeconds(1));
 		driver.get("http://localhost/crm");
