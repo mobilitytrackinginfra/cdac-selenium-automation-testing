@@ -13,7 +13,7 @@ public class BLab14XPath {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://localhost/crm");
-		Thread.sleep(Duration.ofSeconds(2));
+		Thread.sleep(Duration.ofSeconds(5));
 		
 		driver.findElement(By.xpath("/html/body/div/div/div/div[2]/div/form/div/input")).sendKeys("admin");
 		Thread.sleep(Duration.ofSeconds(1));
@@ -36,7 +36,7 @@ public class BLab14XPath {
 		Thread.sleep(Duration.ofSeconds(2));
 		
 		driver.get("http://localhost/crm/#Account/create");
-		Thread.sleep(Duration.ofSeconds(2));
+		Thread.sleep(Duration.ofSeconds(3));
 		driver.findElement(By.xpath("//button[@data-action='addEmailAddress']/../div/div/input")).sendKeys("test");
 		Thread.sleep(Duration.ofSeconds(5));
 		

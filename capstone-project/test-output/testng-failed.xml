@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [EspoCRM Automation Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.espocrm.utils.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="4" parallel="tests" name="Accounts Tests(failed)">
+    <classes>
+      <class name="com.espocrm.tests.AccountsTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="login"/>
+          <include name="accountsCrudTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.espocrm.tests.AccountsTest -->
+    </classes>
+  </test> <!-- Accounts Tests(failed) -->
+  <test thread-count="4" parallel="tests" name="Contacts Tests(failed)">
+    <classes>
+      <class name="com.espocrm.tests.ContactsTest">
+        <methods>
+          <include name="login"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="contactsCrudTest"/>
+        </methods>
+      </class> <!-- com.espocrm.tests.ContactsTest -->
+    </classes>
+  </test> <!-- Contacts Tests(failed) -->
+  <test thread-count="4" parallel="tests" name="Leads Tests(failed)">
+    <classes>
+      <class name="com.espocrm.tests.LeadsTest">
+        <methods>
+          <include name="login"/>
+          <include name="tearDown"/>
+          <include name="leadsCrudTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.espocrm.tests.LeadsTest -->
+    </classes>
+  </test> <!-- Leads Tests(failed) -->
+  <test thread-count="4" parallel="tests" name="Opportunities Tests(failed)">
+    <classes>
+      <class name="com.espocrm.tests.OpportunitiesTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="login"/>
+          <include name="setUp"/>
+          <include name="opportunitiesCrudTest"/>
+        </methods>
+      </class> <!-- com.espocrm.tests.OpportunitiesTest -->
+    </classes>
+  </test> <!-- Opportunities Tests(failed) -->
+</suite> <!-- Failed suite [EspoCRM Automation Suite] -->

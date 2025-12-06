@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-EspoCRM_Automation_Suite" class="navigator-link">
+              <span class="suite-name border-passed">EspoCRM Automation Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-EspoCRM_Automation_Suite" class="navigator-link ">
+                    <span>D:\CDAC\cdac-selenium-automation-testing\capstone-project\src\test\resources\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-EspoCRM_Automation_Suite" class="navigator-link ">
+                    <span class="test-stats">4 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-EspoCRM_Automation_Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-EspoCRM_Automation_Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-EspoCRM_Automation_Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-EspoCRM_Automation_Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-EspoCRM_Automation_Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">4 methods,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-EspoCRM_Automation_Suite" class="hide-methods passed suite-EspoCRM_Automation_Suite"> (hide)</a> <!-- hide-methods passed suite-EspoCRM_Automation_Suite -->
+                      <a href="#" panel-name="suite-EspoCRM_Automation_Suite" class="show-methods passed suite-EspoCRM_Automation_Suite"> (show)</a> <!-- show-methods passed suite-EspoCRM_Automation_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-EspoCRM_Automation_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EspoCRM_Automation_Suite" title="com.espocrm.tests.AccountsTest" class="method navigator-link" hash-for-method="accountsCrudTest({name=Test Account 1, website=https://example.com, phone=9096591261, email=sdk@gmail.com, countrycod...)">accountsCrudTest({name=Test Account 1, website=https://example.com, phone=9096591261, email=sdk@gmail.com, countrycod...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EspoCRM_Automation_Suite" title="com.espocrm.tests.ContactsTest" class="method navigator-link" hash-for-method="contactsCrudTest({firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe})">contactsCrudTest({firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EspoCRM_Automation_Suite" title="com.espocrm.tests.LeadsTest" class="method navigator-link" hash-for-method="leadsCrudTest({firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe})">leadsCrudTest({firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EspoCRM_Automation_Suite" title="com.espocrm.tests.OpportunitiesTest" class="method navigator-link" hash-for-method="opportunitiesCrudTest({name=Opportunity1, amount=10000, closedate=02.11.2025, stage=Proposal})">opportunitiesCrudTest({name=Opportunity1, amount=10000, closedate=02.11.2025, stage=Proposal})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-EspoCRM_Automation_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-EspoCRM_Automation_Suite" class="panel EspoCRM_Automation_Suite">
+          <div class="suite-EspoCRM_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.espocrm.tests.LeadsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="leadsCrudTest({firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe})">
+                  </a> <!-- leadsCrudTest({firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe}) -->
+                  <span class="method-name">leadsCrudTest</span>
+                  <span class="parameters">({firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EspoCRM_Automation_Suite-class-passed -->
+          <div class="suite-EspoCRM_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.espocrm.tests.OpportunitiesTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="opportunitiesCrudTest({name=Opportunity1, amount=10000, closedate=02.11.2025, stage=Proposal})">
+                  </a> <!-- opportunitiesCrudTest({name=Opportunity1, amount=10000, closedate=02.11.2025, stage=Proposal}) -->
+                  <span class="method-name">opportunitiesCrudTest</span>
+                  <span class="parameters">({name=Opportunity1, amount=10000, closedate=02.11.2025, stage=Proposal})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EspoCRM_Automation_Suite-class-passed -->
+          <div class="suite-EspoCRM_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.espocrm.tests.ContactsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="contactsCrudTest({firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe})">
+                  </a> <!-- contactsCrudTest({firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe}) -->
+                  <span class="method-name">contactsCrudTest</span>
+                  <span class="parameters">({firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EspoCRM_Automation_Suite-class-passed -->
+          <div class="suite-EspoCRM_Automation_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.espocrm.tests.AccountsTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="accountsCrudTest({name=Test Account 1, website=https://example.com, phone=9096591261, email=sdk@gmail.com, countrycod...)">
+                  </a> <!-- accountsCrudTest({name=Test Account 1, website=https://example.com, phone=9096591261, email=sdk@gmail.com, countrycod...) -->
+                  <span class="method-name">accountsCrudTest</span>
+                  <span class="parameters">({name=Test Account 1, website=https://example.com, phone=9096591261, email=sdk@gmail.com, countrycode=+91})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EspoCRM_Automation_Suite-class-passed -->
+        </div> <!-- panel EspoCRM_Automation_Suite -->
+        <div panel-name="test-xml-EspoCRM_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\CDAC\cdac-selenium-automation-testing\capstone-project\src\test\resources\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;4&quot; parallel=&quot;tests&quot; name=&quot;EspoCRM Automation Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.espocrm.utils.ExtentReportListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;4&quot; parallel=&quot;tests&quot; name=&quot;Accounts Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.espocrm.tests.AccountsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Accounts Tests --&gt;
+  &lt;test thread-count=&quot;4&quot; parallel=&quot;tests&quot; name=&quot;Contacts Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.espocrm.tests.ContactsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Contacts Tests --&gt;
+  &lt;test thread-count=&quot;4&quot; parallel=&quot;tests&quot; name=&quot;Leads Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.espocrm.tests.LeadsTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Leads Tests --&gt;
+  &lt;test thread-count=&quot;4&quot; parallel=&quot;tests&quot; name=&quot;Opportunities Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.espocrm.tests.OpportunitiesTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Opportunities Tests --&gt;
+&lt;/suite&gt; &lt;!-- EspoCRM Automation Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-EspoCRM_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for EspoCRM Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Accounts Tests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Contacts Tests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Leads Tests (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Opportunities Tests (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-EspoCRM_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for EspoCRM Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-EspoCRM_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for EspoCRM Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_EspoCRM_Automation_Suite');
+function tableData_EspoCRM_Automation_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(4);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'accountsCrudTest')
+data.setCell(0, 2, 'com.espocrm.tests.AccountsTest')
+data.setCell(0, 3, 22226);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'leadsCrudTest')
+data.setCell(1, 2, 'com.espocrm.tests.LeadsTest')
+data.setCell(1, 3, 21863);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'contactsCrudTest')
+data.setCell(2, 2, 'com.espocrm.tests.ContactsTest')
+data.setCell(2, 3, 19832);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'opportunitiesCrudTest')
+data.setCell(3, 2, 'com.espocrm.tests.OpportunitiesTest')
+data.setCell(3, 3, 19579);
+window.suiteTableData['EspoCRM_Automation_Suite']= { tableData: data, tableDiv: 'times-div-EspoCRM_Automation_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 29 seconds</span>
+              <div id="times-div-EspoCRM_Automation_Suite">
+              </div> <!-- times-div-EspoCRM_Automation_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-EspoCRM_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for EspoCRM Automation Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-EspoCRM_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-EspoCRM_Automation_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.AccountsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.ContactsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.LeadsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.OpportunitiesTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">2996 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.ContactsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">3144 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.AccountsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">3243 ms</span>
+              </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.LeadsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">login</span>
+                <span class="method-start">3451 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">leadsCrudTest({firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe})</span>
+                <span class="method-start">5700 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.ContactsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">contactsCrudTest({firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe})</span>
+                <span class="method-start">5836 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.OpportunitiesTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">opportunitiesCrudTest({name=Opportunity1, amount=10000, closedate=02.11.2025, stage=Proposal})</span>
+                <span class="method-start">5838 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.AccountsTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">accountsCrudTest({name=Test Account 1, website=https://example.com, phone=9096591261, email=sdk@gmail.com, countrycod...)</span>
+                <span class="method-start">5897 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.OpportunitiesTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">25426 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.ContactsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">25669 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.LeadsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">27563 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.espocrm.tests.AccountsTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">28124 ms</span>
+              </div> <!-- configuration-method after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

@@ -22,7 +22,9 @@ public class BLab19Screenshot {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		
 		File src = ts.getScreenshotAs(OutputType.FILE);
+		System.out.println(src.getAbsolutePath());
 	    File dst = new File("D:\\CDAC\\cdac-selenium-automation-testing\\screenshot-temp\\"+System.currentTimeMillis()+".png");
+		System.out.println(dst.getAbsolutePath());
 	    dst.getParentFile().mkdirs();
 	    Files.copy(src.toPath(), dst.toPath());
 

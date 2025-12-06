@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="EspoCRM Automation Suite" parallel="tests" thread-count="4">
+
+    <listeners>
+        <listener class-name="com.espocrm.utils.ExtentReportListener"/>
+    </listeners>
+    
+    
+    <test name="Accounts Tests">
+        <classes>
+            <class name="com.espocrm.tests.AccountsTest" />
+        </classes>
+    </test>
+    <test name="Contacts Tests">
+        <classes>
+            <class name="com.espocrm.tests.ContactsTest" />
+        </classes>
+    </test>
+    <test name="Leads Tests">
+        <classes>
+            <class name="com.espocrm.tests.LeadsTest" />
+        </classes>
+    </test>
+    <test name="Opportunities Tests">
+        <classes>
+            <class name="com.espocrm.tests.OpportunitiesTest" />
+        </classes>
+    </test>
+</suite>

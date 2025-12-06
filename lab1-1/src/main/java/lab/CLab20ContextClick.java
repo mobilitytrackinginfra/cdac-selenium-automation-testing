@@ -19,7 +19,8 @@ public class CLab20ContextClick {
 		driver.get("http://localhost/samples/contextclick.php");
 		Thread.sleep(Duration.ofSeconds(3));
 
-		Actions actions = new Actions(driver).moveToElement(driver.findElement(By.className("box"))).contextClick()
+		Actions actions = new Actions(driver)
+				.moveToElement(driver.findElement(By.className("box"))).contextClick()
 				.pause(1000).click(driver.findElement(By.xpath("//button[@data-action='copy']")))
 				.pause(1000);
 		Action act = actions.build();

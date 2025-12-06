@@ -15,11 +15,12 @@ public class CLab23ImplicitWait {
 		driver.manage().window().maximize();
 		driver.get("http://localhost/crm");
 		
+		System.out.println("Before Set: "+driver.manage().timeouts().getImplicitWaitTimeout().getSeconds());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		Duration timeout = driver.manage().timeouts().getImplicitWaitTimeout();
-		System.out.println(timeout.getSeconds());
+		System.out.println("After Set: "+timeout.getSeconds());
 		
-		By locatorUsername = By.id("field-userName");
+		By locatorUsername = By.id("field-userName1");
 		WebElement txtUsername = driver.findElement(locatorUsername);
 		txtUsername.sendKeys("admin");
 		By locatorPassword = By.name("password");

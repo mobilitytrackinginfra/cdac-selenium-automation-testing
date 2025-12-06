@@ -12,7 +12,9 @@ public class CLab26ScriptLoadTimeout {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		System.out.println("Before Set: "+driver.manage().timeouts().getScriptTimeout().getSeconds());
 		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(5));
+		System.out.println("After Set: "+driver.manage().timeouts().getScriptTimeout().getSeconds());
 		driver.get("http://localhost/samples/timeout-test.php?mode=fast");
 		
 		

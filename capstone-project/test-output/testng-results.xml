@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-05T11:04:40 IST" name="EspoCRM Automation Suite" finished-at="2025-12-05T11:05:07 IST" duration-ms="26645">
+    <groups>
+    </groups>
+    <test started-at="2025-12-05T11:04:40 IST" name="Opportunities Tests" finished-at="2025-12-05T11:05:03 IST" duration-ms="22881">
+      <class name="com.espocrm.tests.OpportunitiesTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.espocrm.tests.OpportunitiesTest@6933b6c6]" started-at="2025-12-05T11:04:41 IST" name="setUp" finished-at="2025-12-05T11:04:44 IST" duration-ms="3347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.espocrm.tests.OpportunitiesTest@6933b6c6]" started-at="2025-12-05T11:04:44 IST" name="login" finished-at="2025-12-05T11:04:46 IST" depends-on-methods="com.espocrm.tests.BaseTest.setUp" duration-ms="1791" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="opportunitiesCrudTest(java.util.Map)[pri:0, instance:com.espocrm.tests.OpportunitiesTest@6933b6c6]" started-at="2025-12-05T11:04:46 IST" name="opportunitiesCrudTest" data-provider="opportunityData" finished-at="2025-12-05T11:05:01 IST" duration-ms="15680" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{name=Opportunity1, amount=10000, closedate=02.11.2025, stage=Proposal}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- opportunitiesCrudTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.espocrm.tests.OpportunitiesTest@6933b6c6]" started-at="2025-12-05T11:05:01 IST" name="tearDown" finished-at="2025-12-05T11:05:03 IST" duration-ms="1369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.espocrm.tests.OpportunitiesTest -->
+    </test> <!-- Opportunities Tests -->
+    <test started-at="2025-12-05T11:04:40 IST" name="Contacts Tests" finished-at="2025-12-05T11:05:03 IST" duration-ms="23197">
+      <class name="com.espocrm.tests.ContactsTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.espocrm.tests.ContactsTest@5c86a017]" started-at="2025-12-05T11:04:41 IST" name="setUp" finished-at="2025-12-05T11:04:44 IST" duration-ms="3422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.espocrm.tests.ContactsTest@5c86a017]" started-at="2025-12-05T11:04:44 IST" name="login" finished-at="2025-12-05T11:04:46 IST" depends-on-methods="com.espocrm.tests.BaseTest.setUp" duration-ms="2091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="contactsCrudTest(java.util.Map)[pri:0, instance:com.espocrm.tests.ContactsTest@5c86a017]" started-at="2025-12-05T11:04:46 IST" name="contactsCrudTest" data-provider="contactData" finished-at="2025-12-05T11:05:03 IST" duration-ms="16435" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactsCrudTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.espocrm.tests.ContactsTest@5c86a017]" started-at="2025-12-05T11:05:03 IST" name="tearDown" finished-at="2025-12-05T11:05:03 IST" duration-ms="573" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.espocrm.tests.ContactsTest -->
+    </test> <!-- Contacts Tests -->
+    <test started-at="2025-12-05T11:04:40 IST" name="Accounts Tests" finished-at="2025-12-05T11:05:05 IST" duration-ms="25051">
+      <class name="com.espocrm.tests.AccountsTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.espocrm.tests.AccountsTest@5b247367]" started-at="2025-12-05T11:04:41 IST" name="setUp" finished-at="2025-12-05T11:04:44 IST" duration-ms="3669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.espocrm.tests.AccountsTest@5b247367]" started-at="2025-12-05T11:04:44 IST" name="login" finished-at="2025-12-05T11:04:46 IST" depends-on-methods="com.espocrm.tests.BaseTest.setUp" duration-ms="1920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="accountsCrudTest(java.util.Map)[pri:0, instance:com.espocrm.tests.AccountsTest@5b247367]" started-at="2025-12-05T11:04:46 IST" name="accountsCrudTest" data-provider="accountData" finished-at="2025-12-05T11:05:05 IST" duration-ms="18467" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{name=Test Account 1, website=https://example.com, phone=9096591261, email=sdk@gmail.com, countrycode=+91}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountsCrudTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.espocrm.tests.AccountsTest@5b247367]" started-at="2025-12-05T11:05:05 IST" name="tearDown" finished-at="2025-12-05T11:05:05 IST" duration-ms="322" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.espocrm.tests.AccountsTest -->
+    </test> <!-- Accounts Tests -->
+    <test started-at="2025-12-05T11:04:40 IST" name="Leads Tests" finished-at="2025-12-05T11:05:07 IST" duration-ms="26645">
+      <class name="com.espocrm.tests.LeadsTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.espocrm.tests.LeadsTest@1b919693]" started-at="2025-12-05T11:04:41 IST" name="setUp" finished-at="2025-12-05T11:04:44 IST" duration-ms="3425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:com.espocrm.tests.LeadsTest@1b919693]" started-at="2025-12-05T11:04:44 IST" name="login" finished-at="2025-12-05T11:04:46 IST" depends-on-methods="com.espocrm.tests.BaseTest.setUp" duration-ms="2068" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="leadsCrudTest(java.util.Map)[pri:0, instance:com.espocrm.tests.LeadsTest@1b919693]" started-at="2025-12-05T11:04:46 IST" name="leadsCrudTest" data-provider="leadData" finished-at="2025-12-05T11:05:06 IST" duration-ms="20223" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{firstname=John, phone=9096591261, email=john.doe@example.com, countrycode=+91, lastname=Doe}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- leadsCrudTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.espocrm.tests.LeadsTest@1b919693]" started-at="2025-12-05T11:05:06 IST" name="tearDown" finished-at="2025-12-05T11:05:07 IST" duration-ms="254" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.espocrm.tests.LeadsTest -->
+    </test> <!-- Leads Tests -->
+  </suite> <!-- EspoCRM Automation Suite -->
+</testng-results>

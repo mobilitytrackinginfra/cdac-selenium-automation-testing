@@ -19,6 +19,7 @@ public class BLab16Windows {
 
 		String originalWindow = driver.getWindowHandle();
 		Set<String> before = driver.getWindowHandles();
+		System.out.println("Current Window Handle"+originalWindow);
 		System.out.println("All Window IDs Before New Window "+before);
 		driver.findElement(By.linkText("EspoCRM, Inc.")).click();
 		Thread.sleep(Duration.ofSeconds(2));
@@ -40,7 +41,7 @@ public class BLab16Windows {
 		
 		Thread.sleep(Duration.ofSeconds(2));
 		driver.switchTo().window(originalWindow); //Mandatory (Exception - no such window: target window already closed)
-		driver.switchTo().newWindow(WindowType.TAB);
+		driver.switchTo().newWindow(WindowType.WINDOW);
 		Thread.sleep(Duration.ofSeconds(1));
 		driver.get("http://localhost/crm");
 		Thread.sleep(Duration.ofSeconds(3));

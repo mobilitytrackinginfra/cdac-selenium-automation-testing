@@ -18,7 +18,7 @@ public class ALab9ShadowRoot {
 		Thread.sleep(Duration.ofSeconds(2));
 
 //		driver.findElement(By.id("shadow-btn")).click();
-
+		
 		WebElement shadowHost = driver.findElement(By.id("shadow-host"));
 		SearchContext root = shadowHost.getShadowRoot();
 		root.findElement(By.id("shadow-btn")).click();

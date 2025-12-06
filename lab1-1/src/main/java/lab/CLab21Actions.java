@@ -40,7 +40,8 @@ public class CLab21Actions {
 		
 		Thread.sleep(Duration.ofSeconds(3));
 		
-		act = new Actions(driver).dragAndDrop(driver.findElement(By.xpath("//span[text()='Stream']")), driver.findElement(By.xpath("//span[text()='My Activities']")));
+		act = new Actions(driver).dragAndDrop(driver.findElement(By.xpath("//span[text()='Stream']")), 
+				driver.findElement(By.xpath("//span[text()='My Activities']")));
 		act.perform();
 		
 		Thread.sleep(Duration.ofSeconds(5));
@@ -48,11 +49,14 @@ public class CLab21Actions {
 		driver.get("https://en.wikipedia.org/wiki/India");
 		Thread.sleep(Duration.ofSeconds(3));
 		
-		act = new Actions(driver).scrollToElement(driver.findElement(By.xpath("//h2[@id='Etymology']"))).pause(Duration.ofSeconds(3)).scrollByAmount(0, 200);
+		act = new Actions(driver).scrollToElement(driver.findElement(By.xpath("//h2[@id='Etymology']")))
+				.pause(Duration.ofSeconds(3)).scrollByAmount(0, 200);
 		act.perform();
 		Thread.sleep(Duration.ofSeconds(3));
 		
-		new Actions(driver).scrollFromOrigin(ScrollOrigin.fromElement(driver.findElement(By.xpath("//span[text()='India']"))), 0, 200).perform();
+		new Actions(driver)
+		.scrollFromOrigin(ScrollOrigin.fromElement(driver.findElement(By.xpath("//span[text()='India']"))), 0, 200)
+		.perform();
 		Thread.sleep(Duration.ofSeconds(5));
 		driver.quit();
 

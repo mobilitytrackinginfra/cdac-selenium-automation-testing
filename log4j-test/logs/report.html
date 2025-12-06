@@ -1,0 +1,382 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Automation Execution Report</title>
+<style type="text/css">
+<!--
+body, table {font-family:arial,sans-serif; font-size: medium
+;}th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade="noshade">
+Log session start time Mon Dec 01 11:30:42 IST 2025<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Logger</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>578</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.MainApplication logger">app.MainApplication</td>
+<td title="Message">=== Application starting ===</td>
+</tr>
+
+<tr>
+<td>586</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.MainApplication logger">app.MainApplication</td>
+<td title="Message">Calling registerUser...</td>
+</tr>
+
+<tr>
+<td>588</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.UserController logger">app.UserController</td>
+<td title="Message">Received request to register user: swapnil</td>
+</tr>
+
+<tr>
+<td>588</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">Starting registration process for swapnil</td>
+</tr>
+
+<tr>
+<td>589</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.PasswordValidator logger">app.PasswordValidator</td>
+<td title="Message">Validating password strength</td>
+</tr>
+
+<tr>
+<td>589</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.PasswordValidator logger">app.PasswordValidator</td>
+<td title="Message">Password is too short</td>
+</tr>
+
+<tr>
+<td>590</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">Password validation failed for user swapnil</td>
+</tr>
+
+<tr>
+<td>590</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="app.UserController logger">app.UserController</td>
+<td title="Message">Validation failed for user swapnil: Weak password</td>
+</tr>
+
+<tr>
+<td>591</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.MainApplication logger">app.MainApplication</td>
+<td title="Message">Calling registerUser with strong password...</td>
+</tr>
+
+<tr>
+<td>591</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.UserController logger">app.UserController</td>
+<td title="Message">Received request to register user: john_doe</td>
+</tr>
+
+<tr>
+<td>593</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">Starting registration process for john_doe</td>
+</tr>
+
+<tr>
+<td>593</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.PasswordValidator logger">app.PasswordValidator</td>
+<td title="Message">Validating password strength</td>
+</tr>
+
+<tr>
+<td>603</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.PasswordValidator logger">app.PasswordValidator</td>
+<td title="Message">Password strong=true (hasDigit=true, hasUpper=true, hasLower=true)</td>
+</tr>
+
+<tr>
+<td>604</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">Password validation passed for john_doe</td>
+</tr>
+
+<tr>
+<td>604</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">Checking if username john_doe already exists</td>
+</tr>
+
+<tr>
+<td>605</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserRepository logger">app.UserRepository</td>
+<td title="Message">Checking existence of user john_doe in repository</td>
+</tr>
+
+<tr>
+<td>606</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">Saving user john_doe to database</td>
+</tr>
+
+<tr>
+<td>607</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserRepository logger">app.UserRepository</td>
+<td title="Message">Saving user john_doe in repository</td>
+</tr>
+
+<tr>
+<td>607</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.UserRepository logger">app.UserRepository</td>
+<td title="Message">User john_doe saved to repository (total users: 1)</td>
+</tr>
+
+<tr>
+<td>607</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">User john_doe successfully registered in service layer</td>
+</tr>
+
+<tr>
+<td>608</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.UserController logger">app.UserController</td>
+<td title="Message">User john_doe registered successfully</td>
+</tr>
+
+<tr>
+<td>608</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.MainApplication logger">app.MainApplication</td>
+<td title="Message">=== Application finished ===</td>
+</tr>
+</table>
+<br>
+</body></html>
+
+<tr>
+<td>578</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.MainApplication logger">app.MainApplication</td>
+<td title="Message">=== Application starting ===</td>
+</tr>
+
+<tr>
+<td>592</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.MainApplication logger">app.MainApplication</td>
+<td title="Message">Calling registerUser...</td>
+</tr>
+
+<tr>
+<td>594</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.UserController logger">app.UserController</td>
+<td title="Message">Received request to register user: swapnil</td>
+</tr>
+
+<tr>
+<td>595</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">Starting registration process for swapnil</td>
+</tr>
+
+<tr>
+<td>595</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.PasswordValidator logger">app.PasswordValidator</td>
+<td title="Message">Validating password strength</td>
+</tr>
+
+<tr>
+<td>595</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.PasswordValidator logger">app.PasswordValidator</td>
+<td title="Message">Password is too short</td>
+</tr>
+
+<tr>
+<td>595</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">Password validation failed for user swapnil</td>
+</tr>
+
+<tr>
+<td>596</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="app.UserController logger">app.UserController</td>
+<td title="Message">Validation failed for user swapnil: Weak password</td>
+</tr>
+
+<tr>
+<td>597</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.MainApplication logger">app.MainApplication</td>
+<td title="Message">Calling registerUser with strong password...</td>
+</tr>
+
+<tr>
+<td>597</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.UserController logger">app.UserController</td>
+<td title="Message">Received request to register user: john_doe</td>
+</tr>
+
+<tr>
+<td>597</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">Starting registration process for john_doe</td>
+</tr>
+
+<tr>
+<td>598</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.PasswordValidator logger">app.PasswordValidator</td>
+<td title="Message">Validating password strength</td>
+</tr>
+
+<tr>
+<td>603</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.PasswordValidator logger">app.PasswordValidator</td>
+<td title="Message">Password strong=true (hasDigit=true, hasUpper=true, hasLower=true)</td>
+</tr>
+
+<tr>
+<td>604</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">Password validation passed for john_doe</td>
+</tr>
+
+<tr>
+<td>604</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">Checking if username john_doe already exists</td>
+</tr>
+
+<tr>
+<td>605</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserRepository logger">app.UserRepository</td>
+<td title="Message">Checking existence of user john_doe in repository</td>
+</tr>
+
+<tr>
+<td>605</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">Saving user john_doe to database</td>
+</tr>
+
+<tr>
+<td>606</td>
+<td title="main thread">main</td>
+<td title="Level"><font color="#339933">DEBUG</font></td>
+<td title="app.UserRepository logger">app.UserRepository</td>
+<td title="Message">Saving user john_doe in repository</td>
+</tr>
+
+<tr>
+<td>606</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.UserRepository logger">app.UserRepository</td>
+<td title="Message">User john_doe saved to repository (total users: 1)</td>
+</tr>
+
+<tr>
+<td>606</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.UserService logger">app.UserService</td>
+<td title="Message">User john_doe successfully registered in service layer</td>
+</tr>
+
+<tr>
+<td>607</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.UserController logger">app.UserController</td>
+<td title="Message">User john_doe registered successfully</td>
+</tr>
+
+<tr>
+<td>607</td>
+<td title="main thread">main</td>
+<td title="Level">INFO</td>
+<td title="app.MainApplication logger">app.MainApplication</td>
+<td title="Message">=== Application finished ===</td>
+</tr>
+</table>
+<br>
+</body></html>

@@ -21,7 +21,7 @@ public class BLab12Select {
 		Select country = new Select(el);
 		System.out.println("###Multiple "+country.isMultiple());
 
-		country.selectByIndex(2);
+		country.selectByIndex(0);
 		Thread.sleep(Duration.ofSeconds(1));
 		country.selectByValue("IN");
 		Thread.sleep(Duration.ofSeconds(1));
