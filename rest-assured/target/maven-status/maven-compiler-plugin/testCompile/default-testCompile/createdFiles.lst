@@ -1,0 +1,6 @@
+test\TestResponseSpecifictions.class
+model\BookResponse.class
+test\TestRequestMethods.class
+model\Book.class
+model\Meta.class
+test\TestRequestSpecifictions.class
