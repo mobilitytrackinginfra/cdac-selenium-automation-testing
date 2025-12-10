@@ -1,0 +1,22 @@
+{
+    "nextBookId": 8,
+    "books": {
+        "1": {
+            "id": 1,
+            "title": "Clean Code",
+            "author": "Robert C. Martin",
+            "price": 450,
+            "stock": 10,
+            "createdAt": "2025-12-10T12:26:52+01:00"
+        },
+        "2": {
+            "id": 2,
+            "title": "Effective Java",
+            "author": "Joshua Bloch",
+            "price": 600,
+            "stock": 5,
+            "createdAt": "2025-12-10T12:26:52+01:00"
+        }
+    },
+    "rateLimitedCount": 0
+}
