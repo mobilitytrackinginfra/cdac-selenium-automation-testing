@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-12T18:07:00 UTC" name="Docker Selenium Test Suite" finished-at="2025-12-12T18:07:15 UTC" duration-ms="14121">
+    <groups>
+    </groups>
+    <test started-at="2025-12-12T18:07:00 UTC" name="Google Tests" finished-at="2025-12-12T18:07:15 UTC" duration-ms="14121">
+      <class name="com.example.tests.OdooHomePageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.tests.OdooHomePageTest@72a7c7e0]" started-at="2025-12-12T18:07:01 UTC" name="setUp" finished-at="2025-12-12T18:07:04 UTC" duration-ms="3542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testOdooHomePageLoads()[pri:0, instance:com.example.tests.OdooHomePageTest@72a7c7e0]" started-at="2025-12-12T18:07:04 UTC" name="testOdooHomePageLoads" description="Verify Odoo homepage loads successfully" finished-at="2025-12-12T18:07:06 UTC" duration-ms="2347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOdooHomePageLoads -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.tests.OdooHomePageTest@72a7c7e0]" started-at="2025-12-12T18:07:06 UTC" name="tearDown" finished-at="2025-12-12T18:07:07 UTC" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.example.tests.OdooHomePageTest@72a7c7e0]" started-at="2025-12-12T18:07:07 UTC" name="setUp" finished-at="2025-12-12T18:07:08 UTC" duration-ms="827" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testOdooPricing()[pri:0, instance:com.example.tests.OdooHomePageTest@72a7c7e0]" started-at="2025-12-12T18:07:08 UTC" name="testOdooPricing" description="Verify Odoo pricing works correctly" finished-at="2025-12-12T18:07:14 UTC" duration-ms="6825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOdooPricing -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.example.tests.OdooHomePageTest@72a7c7e0]" started-at="2025-12-12T18:07:14 UTC" name="tearDown" finished-at="2025-12-12T18:07:15 UTC" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.tests.OdooHomePageTest -->
+    </test> <!-- Google Tests -->
+  </suite> <!-- Docker Selenium Test Suite -->
+</testng-results>

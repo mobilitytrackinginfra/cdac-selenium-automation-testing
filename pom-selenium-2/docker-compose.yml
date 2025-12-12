@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  selenium-tester:
+    build: .
+    image: selenium-pom-tester:latest
+    container_name: selenium-tester-local
+    # Important: Chrome needs shared memory for stability
+    shm_size: "2g"
+    environment:
+      MAVEN_OPTS: "-Xmx512m"
+    volumes:
+      # Mount reports directory to access test results on host
+      - ./target/surefire-reports:/app/target/surefire-reports
+      - ./target/test-output:/app/target/test-output
+    # Network mode to access localhost services if needed
+    # Uncomment if your test target (http://localhost/crm) runs on host
+    # network_mode: "host"

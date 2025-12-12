@@ -1,0 +1,33 @@
+# Security Testing Lab - .htaccess
+# Intentionally weak configuration for testing
+
+# Enable directory listing (vulnerability)
+Options +Indexes
+
+# Allow all file types
+AddType application/x-httpd-php .php .phtml .php5 .php7
+
+# CORS - Allow everything (vulnerability)
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+Header set Access-Control-Allow-Headers "*"
+
+# Verbose errors (vulnerability)
+php_flag display_errors on
+php_value error_reporting E_ALL
+
+# Allow large uploads
+php_value upload_max_filesize 100M
+php_value post_max_size 100M
+
+# Weak security headers (or lack thereof)
+# No X-Frame-Options
+# No X-Content-Type-Options
+# No Content-Security-Policy
+
+# Rewrite rules
+RewriteEngine On
+
+# API routing
+RewriteRule ^api/v1/(.*)$ api.php?endpoint=$1 [L,QSA]
+

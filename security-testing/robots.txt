@@ -1,0 +1,33 @@
+# Security Testing Lab - robots.txt
+# This file intentionally discloses sensitive paths
+
+User-agent: *
+Disallow: /admin.php
+Disallow: /config.php
+Disallow: /backup/
+Disallow: /uploads/
+Disallow: /api.php
+Disallow: /phpinfo.php
+Disallow: /setup.php
+Disallow: /.git/
+Disallow: /logs/
+Disallow: /debug.php
+Disallow: /test.php
+Disallow: /backup.sql
+Disallow: /database.sql
+Disallow: /.env
+
+# Hidden admin paths
+Disallow: /admin/
+Disallow: /administrator/
+Disallow: /wp-admin/
+Disallow: /secret/
+
+# Sensitive files
+Disallow: /*.bak
+Disallow: /*.sql
+Disallow: /*.log
+Disallow: /*.conf
+
+Sitemap: http://localhost/security-testing/sitemap.xml
+

@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Docker Selenium Test Suite">
+    
+    <test name="Google Tests">
+        <classes>
+            <class name="com.example.tests.OdooHomePageTest"/>
+        </classes>
+    </test>
+    
+    
+</suite>
+

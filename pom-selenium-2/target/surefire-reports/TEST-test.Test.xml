@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="test.Test" time="6.044" tests="2" errors="0" skipped="1" failures="1">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/app/target/test-classes:/app/target/classes:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-java/4.38.0/selenium-java-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-api/4.38.0/selenium-api-4.38.0.jar:/home/tester/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.38.0/selenium-chrome-driver-4.38.0.jar:/home/tester/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.38.0/selenium-chromium-driver-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-json/4.38.0/selenium-json-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.38.0/selenium-manager-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v140/4.38.0/selenium-devtools-v140-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v141/4.38.0/selenium-devtools-v141-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v142/4.38.0/selenium-devtools-v142-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.38.0/selenium-edge-driver-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.38.0/selenium-firefox-driver-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-http/4.38.0/selenium-http-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.38.0/selenium-ie-driver-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.38.0/selenium-remote-driver-4.38.0.jar:/home/tester/.m2/repository/com/google/guava/guava/33.5.0-jre/guava-33.5.0-jre.jar:/home/tester/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/home/tester/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/tester/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar:/home/tester/.m2/repository/com/google/j2objc/j2objc-annotations/3.1/j2objc-annotations-3.1.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-api/1.55.0/opentelemetry-api-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-context/1.55.0/opentelemetry-context-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-common/1.55.0/opentelemetry-common-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.55.0/opentelemetry-exporter-logging-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.55.0/opentelemetry-sdk-common-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.55.0/opentelemetry-sdk-extension-autoconfigure-spi-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.55.0/opentelemetry-sdk-extension-autoconfigure-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.55.0/opentelemetry-sdk-trace-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.55.0/opentelemetry-sdk-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.55.0/opentelemetry-sdk-metrics-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.55.0/opentelemetry-sdk-logs-1.55.0.jar:/home/tester/.m2/repository/net/bytebuddy/byte-buddy/1.17.8/byte-buddy-1.17.8.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-os/4.38.0/selenium-os-4.38.0.jar:/home/tester/.m2/repository/org/apache/commons/commons-exec/1.5.0/commons-exec-1.5.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.38.0/selenium-safari-driver-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-support/4.38.0/selenium-support-4.38.0.jar:/home/tester/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/home/tester/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/home/tester/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/home/tester/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/opt/java/openjdk/lib"/>
+    <property name="sun.java.command" value="/app/target/surefire/surefirebooter-20251212171204121_3.jar /app/target/surefire 2025-12-12T17-12-03_036-jvmRun1 surefire-20251212171204121_1tmp surefire_0-20251212171204121_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/app/target/test-classes:/app/target/classes:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-java/4.38.0/selenium-java-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-api/4.38.0/selenium-api-4.38.0.jar:/home/tester/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.38.0/selenium-chrome-driver-4.38.0.jar:/home/tester/.m2/repository/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.38.0/selenium-chromium-driver-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-json/4.38.0/selenium-json-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.38.0/selenium-manager-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v140/4.38.0/selenium-devtools-v140-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v141/4.38.0/selenium-devtools-v141-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v142/4.38.0/selenium-devtools-v142-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.38.0/selenium-edge-driver-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.38.0/selenium-firefox-driver-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-http/4.38.0/selenium-http-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.38.0/selenium-ie-driver-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.38.0/selenium-remote-driver-4.38.0.jar:/home/tester/.m2/repository/com/google/guava/guava/33.5.0-jre/guava-33.5.0-jre.jar:/home/tester/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/home/tester/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/tester/.m2/repository/com/google/errorprone/error_prone_annotations/2.41.0/error_prone_annotations-2.41.0.jar:/home/tester/.m2/repository/com/google/j2objc/j2objc-annotations/3.1/j2objc-annotations-3.1.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-api/1.55.0/opentelemetry-api-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-context/1.55.0/opentelemetry-context-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-common/1.55.0/opentelemetry-common-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.55.0/opentelemetry-exporter-logging-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.55.0/opentelemetry-sdk-common-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.55.0/opentelemetry-sdk-extension-autoconfigure-spi-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.55.0/opentelemetry-sdk-extension-autoconfigure-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.55.0/opentelemetry-sdk-trace-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.55.0/opentelemetry-sdk-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.55.0/opentelemetry-sdk-metrics-1.55.0.jar:/home/tester/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.55.0/opentelemetry-sdk-logs-1.55.0.jar:/home/tester/.m2/repository/net/bytebuddy/byte-buddy/1.17.8/byte-buddy-1.17.8.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-os/4.38.0/selenium-os-4.38.0.jar:/home/tester/.m2/repository/org/apache/commons/commons-exec/1.5.0/commons-exec-1.5.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.38.0/selenium-safari-driver-4.38.0.jar:/home/tester/.m2/repository/org/seleniumhq/selenium/selenium-support/4.38.0/selenium-support-4.38.0.jar:/home/tester/.m2/repository/org/testng/testng/7.11.0/testng-7.11.0.jar:/home/tester/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/home/tester/.m2/repository/org/jcommander/jcommander/1.83/jcommander-1.83.jar:/home/tester/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/tester"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-04-16"/>
+    <property name="java.home" value="/opt/java/openjdk"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/app"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/app/target/surefire/surefirebooter-20251212171204121_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.11+9"/>
+    <property name="user.name" value="tester"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.6.87.2-microsoft-standard-WSL2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.11+9"/>
+    <property name="localRepository" value="/home/tester/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.11"/>
+    <property name="user.dir" value="/app"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.11+9"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="initPage" classname="test.Test" time="5.65">
+    <failure message="unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: chrome=143.0.7499.109)&#10;Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;&#10;System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.6.87.2-microsoft-standard-WSL2&apos;, java.version: &apos;17.0.11&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [fe0529881722b227bd34cecb7c1e6784, get {url=http://localhost/crm}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41939}, goog:processID: 186, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41939/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: fe0529881722b227bd34cecb7c1e6784" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
+unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=143.0.7499.109)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.6.87.2-microsoft-standard-WSL2', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fe0529881722b227bd34cecb7c1e6784, get {url=http://localhost/crm}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41939}, goog:processID: 186, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41939/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fe0529881722b227bd34cecb7c1e6784
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
+	at drivermanager.DriverFactory.initDriver(DriverFactory.java:26)
+	at test.Test.initPage(Test.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:358)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Dec 12, 2025 5:12:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 143, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 143
+]]></system-err>
+  </testcase>
+  <testcase name="loginTest" classname="test.Test" time="0.0">
+    <skipped message="unknown error: net::ERR_CONNECTION_REFUSED&#10;  (Session info: chrome=143.0.7499.109)&#10;Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;&#10;System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.6.87.2-microsoft-standard-WSL2&apos;, java.version: &apos;17.0.11&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [fe0529881722b227bd34cecb7c1e6784, get {url=http://localhost/crm}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.109, chrome: {chromedriverVersion: 143.0.7499.42 (24bdc8c48a0c..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:41939}, goog:processID: 186, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:41939/devtoo..., se:cdpVersion: 143.0.7499.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: fe0529881722b227bd34cecb7c1e6784"/>
+  </testcase>
+</testsuite>
