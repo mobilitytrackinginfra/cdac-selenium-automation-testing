@@ -14,7 +14,9 @@ RUN mvn dependency:go-offline -B
 COPY src ./src
 COPY testng.xml .
 
+ENV SELENIUM_GRID_URL=http://host.docker.internal:4444/wd/hub
+
 # Default command to run tests
 # The selenium.grid.url will be passed as an environment variable
-CMD ["mvn", "test", "-Dselenium.grid.url=${SELENIUM_GRID_URL}"]
+CMD sh -c "mvn test -Dselenium.grid.url=$SELENIUM_GRID_URL"
 

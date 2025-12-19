@@ -1,23 +1,16 @@
 version: '3.8'
 
 services:
-  # Test runner service - connects to your locally running Selenium Grid
   selenium-tests:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: selenium-test-runner
     environment:
-      # Use host.docker.internal to connect to Selenium Grid running on host machine
-      # For Linux, you may need to use the actual host IP instead
-      - SELENIUM_GRID_URL=http://host.docker.internal:4444/wd/hub
-    # For Linux hosts, uncomment the following to access host network
-    # extra_hosts:
-    #   - "host.docker.internal:host-gateway"
+      SELENIUM_GRID_URL: http://host.docker.internal:4444/wd/hub
+    container_name: selenium-test-runner
     command: >
       mvn test -Dselenium.grid.url=http://host.docker.internal:4444/wd/hub
     volumes:
-      # Mount test results directory for viewing reports
       - ./target:/app/target
     networks:
       - selenium-network
@@ -26,3 +19,6 @@ networks:
   selenium-network:
     driver: bridge
 
+#volumes:
+#  reports:
+#   external: true
