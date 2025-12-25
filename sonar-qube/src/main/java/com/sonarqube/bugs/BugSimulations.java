@@ -1,8 +1,14 @@
 package com.sonarqube.bugs;
 
-import java.io.*;
-import java.util.*;
-import java.sql.*;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * This class demonstrates various BUG patterns that SonarQube can detect.
@@ -96,15 +102,6 @@ public class BugSimulations {
         System.out.println(first);
     }
 
-    // Bug: Collection modified during iteration
-    public void concurrentModification(List<String> list) {
-        for (String item : list) {
-            if (item.isEmpty()) {
-                list.remove(item); // ConcurrentModificationException
-            }
-        }
-    }
-
     // ================== MATHEMATICAL ISSUES ==================
     
     // Bug: Division by zero
@@ -125,39 +122,6 @@ public class BugSimulations {
         System.out.println(smallValue);
     }
 
-    // ================== SYNCHRONIZATION ISSUES ==================
-    
-    private int counter = 0;
-    
-    // Bug: Non-synchronized access to shared variable
-    public void incrementCounter() {
-        counter++; // Not thread-safe
-    }
-
-    // Bug: Double-checked locking without volatile
-    private Object instance;
-    
-    public Object getInstance() {
-        if (instance == null) {
-            synchronized (this) {
-                if (instance == null) {
-                    instance = new Object(); // Broken double-checked locking
-                }
-            }
-        }
-        return instance;
-    }
-
-    // Bug: Synchronizing on mutable field
-    private Object lock = new Object();
-    
-    public void synchronizeOnMutableField() {
-        synchronized (lock) { // lock can be reassigned
-            // critical section
-        }
-        lock = new Object(); // Reassigning lock object
-    }
-
     // ================== CONTROL FLOW ISSUES ==================
     
     // Bug: Infinite loop
@@ -167,12 +131,6 @@ public class BugSimulations {
             System.out.println(i);
             // i is never incremented - infinite loop
         }
-    }
-
-    // Bug: Unreachable code after return
-    public int unreachableCode() {
-        return 42;
-        // System.out.println("Unreachable"); // This would be unreachable
     }
 
     // Bug: Dead store - value never used
@@ -189,17 +147,6 @@ public class BugSimulations {
             System.out.println("Always executes");
         }
     }
-
-    // ================== EQUALS/HASHCODE ISSUES ==================
-    
-    // Bug: equals() without hashCode()
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        return true;
-    }
-    // Missing hashCode() override!
 
     // ================== EXCEPTION HANDLING ISSUES ==================
     
@@ -234,18 +181,5 @@ public class BugSimulations {
         throw new Exception("Risky");
     }
 
-    // ================== SERIALIZATION ISSUES ==================
-    
-    // Bug: Serializable class without serialVersionUID
-    static class SerializableWithoutUID implements Serializable {
-        private String data;
-        // Missing: private static final long serialVersionUID = 1L;
-    }
-
-    // Bug: Non-transient non-serializable field
-    static class BadSerialization implements Serializable {
-        private static final long serialVersionUID = 1L;
-        private Thread thread; // Thread is not serializable
-    }
 }
 
