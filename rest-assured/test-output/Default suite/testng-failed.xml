@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.TestXSS">
+      <class name="test.TestFileHandling">
         <methods>
-          <include name="setUp"/>
-          <include name="reflectedXss_VulnerableMode_ShouldNOTAllowScript_BUT_IT_DOES"/>
+          <include name="t1"/>
+          <include name="t2"/>
+          <include name="init"/>
         </methods>
-      </class> <!-- test.TestXSS -->
+      </class> <!-- test.TestFileHandling -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
