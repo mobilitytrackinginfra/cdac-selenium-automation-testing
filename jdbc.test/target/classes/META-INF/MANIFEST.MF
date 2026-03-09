@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 21
+Class-Path: mysql-connector-j-8.2.0.jar protobuf-java-3.21.9.jar h2-2.2.
+ 224.jar HikariCP-5.1.0.jar slf4j-api-1.7.36.jar slf4j-simple-2.0.9.jar
+Main-Class: com.jdbc.tutorial.Main
+Created-By: Maven Integration for Eclipse
+
