@@ -1,15 +1,22 @@
 package carwale.com;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -33,11 +40,183 @@ public class ManualDataCollector {
 	private static final String PATH = "D:\\cars\\";
 	
 	
-	public static void main1(String[] args) throws Exception {
-		printCar(loadCar(PATH+"Hyundai_Creta_1773038760068.ser"));
-	}	
-	
+	public static void mainxc(String[] args) throws Exception {
+		Set<String> set = new LinkedHashSet<>();
+		Set<String> values = new LinkedHashSet<>();
+		
+		File dir = new File(PATH);
+		if (!dir.isDirectory()) {
+			System.err.println("PATH is not a directory: " + PATH);
+			return;
+		}
+		File[] files = dir.listFiles((d, name) -> name != null && name.endsWith(".ser"));
+		if (files == null || files.length == 0) {
+			System.out.println("No .ser files found in " + PATH);
+			return;
+		}
+		List<Car> cars = new ArrayList<>();
+		for (File f : files) {
+			try {
+				Car car = loadCar(f.getAbsolutePath());
+				cars.add(car);
+//				System.out.println("Loaded: " + f.getName() + " -> " + (car.getName() != null ? car.getName() : "(no name)"));
+			} catch (Exception e) {
+				System.err.println("Failed to load " + f.getName() + ": " + e.getMessage());
+			}
+		}
+		System.out.println("Total cars deserialized: " + cars.size());
+		int var = 0;
+		for (Car car : cars) {
+			var = var + car.getVariants().size();
+			System.out.println(car.getName());
+			for(Variant v : car.getVariants()) {
+				for(Section s : v.getSections()) {
+					set.addAll(s.getSpecs().keySet());
+					for(String key : s.getSpecs().keySet()) {
+						values.add(s.getSpecs().get(key));
+					}
+				}
+			}
+		}
+		System.out.println("****************************");
+		Iterator<String> itr = values.iterator();
+		for(String key : set) {
+			System.out.println(key+":"+itr.next());
+		}
+		
+		System.out.println("Total Variants "+var);
+	}
+
+	/**
+	 * Reads all Car objects from PATH (deserialized .ser files), then writes a CSV file
+	 * with columns: Car Name, Variant Name, Price, and every spec key (one column per key).
+	 * One row per variant; spec values are merged from all sections of that variant.
+	 */
 	public static void main(String[] args) throws Exception {
+		// 1. Load all cars from PATH (same as main)
+		File dir = new File(PATH);
+		if (!dir.isDirectory()) {
+			System.err.println("PATH is not a directory: " + PATH);
+			return;
+		}
+		File[] files = dir.listFiles((d, name) -> name != null && name.endsWith(".ser"));
+		if (files == null || files.length == 0) {
+			System.out.println("No .ser files found in " + PATH);
+			return;
+		}
+		List<Car> cars = new ArrayList<>();
+		for (File f : files) {
+			try {
+				Car car = loadCar(f.getAbsolutePath());
+				cars.add(car);
+			} catch (Exception e) {
+				System.err.println("Failed to load " + f.getName() + ": " + e.getMessage());
+			}
+		}
+		if (cars.isEmpty()) {
+			System.out.println("No cars loaded. Skipping CSV export.");
+			return;
+		}
+		// 2. Collect all unique spec keys (column headers)
+		Set<String> allSpecKeys = new TreeSet<>();
+		for (Car car : cars) {
+			if (car.getVariants() == null) continue;
+			for (Variant v : car.getVariants()) {
+				if (v.getSections() == null) continue;
+				for (Section s : v.getSections()) {
+					if (s.getSpecs() != null) allSpecKeys.addAll(s.getSpecs().keySet());
+				}
+			}
+		}
+		List<String> specColumns = new ArrayList<>(allSpecKeys);
+		// 3. Write CSV
+		String csvPath = PATH + "cars_export.csv";
+		try (PrintWriter out = new PrintWriter(new FileWriter(csvPath))) {
+			// Header: Car Name, Variant Name, Price, Luxury, then all spec keys
+			out.print(escapeCsv("Car Name"));
+			out.print(",");
+			out.print(escapeCsv("Variant Name"));
+			out.print(",");
+			out.print(escapeCsv("Price"));
+			out.print(",");
+			out.print(escapeCsv("Luxury"));
+			for (String key : specColumns) {
+				out.print(",");
+				out.print(escapeCsv(key));
+			}
+			out.println();
+			// Rows: one per variant
+			for (Car car : cars) {
+				String carName = car.getName() != null ? car.getName() : "";
+				if (car.getVariants() == null) continue;
+				for (Variant v : car.getVariants()) {
+					String variantName = v.getName() != null ? v.getName() : "";
+					String price = v.getPrice() != null ? v.getPrice() : "";
+					// Merge all specs from all sections of this variant
+					Map<String, String> rowSpecs = new LinkedHashMap<>();
+					if (v.getSections() != null) {
+						for (Section s : v.getSections()) {
+							if (s.getSpecs() != null) rowSpecs.putAll(s.getSpecs());
+						}
+					}
+					out.print(escapeCsv(carName));
+					out.print(",");
+					out.print(escapeCsv(variantName));
+					out.print(",");
+					out.print(escapeCsv(price));
+					out.print(",");
+					out.print(escapeCsv(isLuxury(carName, price) ? "Yes" : "No"));
+					for (String key : specColumns) {
+						out.print(",");
+						out.print(escapeCsv(rowSpecs.getOrDefault(key, "")));
+					}
+					out.println();
+				}
+			}
+		}
+		System.out.println("CSV written to " + csvPath + " (" + cars.size() + " cars).");
+	}
+
+	/** Returns true if the car is considered luxury (by brand or price). */
+	private static boolean isLuxury(String carName, String price) {
+		if (carName == null) carName = "";
+		if (price == null) price = "";
+		String name = carName.trim();
+		String p = price.trim();
+		// Luxury brands (car name typically starts with brand)
+		String[] luxuryBrands = {
+			"Aston Martin", "Audi", "BMW", "Mercedes-Benz", "Mercedes", "Jaguar", "Lexus",
+			"Land Rover", "Rolls-Royce", "Bentley", "Porsche", "Volvo", "Mini", "Genesis",
+			"Maserati", "Lamborghini", "Ferrari", "McLaren", "Bugatti", "Maybach"
+		};
+		for (String brand : luxuryBrands) {
+			if (name.startsWith(brand)) return true;
+		}
+		// Price in Crore = luxury
+		if (p.contains("Crore")) return true;
+		// Price >= 40 Lakh (e.g. "Rs. 44.45 Lakh" or "Rs. 44.45 Lakh\nonwards")
+		if (p.contains("Lakh")) {
+			java.util.regex.Pattern pat = java.util.regex.Pattern.compile("([0-9]+(?:\\.[0-9]+)?)\\s*Lakh");
+			java.util.regex.Matcher m = pat.matcher(p);
+			if (m.find()) {
+				try {
+					double lakh = Double.parseDouble(m.group(1));
+					if (lakh >= 40) return true;
+				} catch (NumberFormatException ignored) { }
+			}
+		}
+		return false;
+	}
+
+	private static String escapeCsv(String value) {
+		if (value == null) return "";
+		if (value.contains(",") || value.contains("\"") || value.contains("\n") || value.contains("\r")) {
+			return "\"" + value.replace("\"", "\"\"") + "\"";
+		}
+		return value;
+	}
+
+	public static void main2(String[] args) throws Exception {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to("https://www.carwale.com/find-car/results/?budget=200000%2C20000000");
@@ -75,13 +254,13 @@ public class ManualDataCollector {
 				variants.add(variant);
 				String title = getElementText("//h1");
 				variant.setName(title);
-				String price = getElementText("//div[contains(text(),'Rs.')]");
+				String price = getElementText("//span[contains(text(),'Rs.')]");
 				variant.setPrice(price);
 				System.out.println("Entered Car Variant "+k+"\t"+title);
 				Thread.sleep(2000);
 				
 				((JavascriptExecutor) dr).executeScript(
-						"arguments[0].scrollIntoView({behavior:'instant',block:'center',inline:'center'});", getElement("//h2[@data-skin='title' and contains(text(),'Other')]"));
+						"arguments[0].scrollIntoView({behavior:'instant',block:'center',inline:'center'});", getElement("//h2[@data-skin='title' and contains(text(),'Other') or contains(text(),'Alternatives')]"));
 				Thread.sleep(300);
 				
 				int specDivsCount = getElements("//h3[text()='Specifications']/../ul/div").size();
@@ -138,7 +317,7 @@ public class ManualDataCollector {
 					}
 				}
 
-				printCar(car);
+//				printCar(car);
 				driver.navigate().back();			
 				Thread.sleep(1000);
 			}	
